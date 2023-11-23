@@ -4,14 +4,14 @@ from routers.user_router import user_router
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(
+    new_app = FastAPI(
         title='Test app',
         version='0.0.1a'
     )
 
-    app.include_router(user_router)
+    new_app.include_router(user_router)
 
-    return app
+    return new_app
 
 
 app = create_app()
