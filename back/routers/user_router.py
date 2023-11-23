@@ -37,8 +37,8 @@ def delete_user(user_id: int):
     for i, user in enumerate(tuple(users)):
         if user.id == user_id:
             del users[i]
-            break
-    return Response(status_code=204)
+            return Response(status_code=204)
+    raise HTTPException(status_code=404, detail='User not found')
 
 
 @user_router.put('/{user_id}', name='NOT WORKING', description='NOT WORKING', response_model=User)

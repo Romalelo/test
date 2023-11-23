@@ -16,12 +16,12 @@ class User:
 
 
 class UpdateUserSchema(BaseModel):
-    id: Optional[int]
-    username: Optional[str]
-    first_name: Optional[str]
-    last_name: Optional[str]
-    age: Optional[int]
-    created_at: Optional[datetime]
+    id: Optional[int] = None
+    username: Optional[str] = None
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    age: Optional[int] = None
+    created_at: Optional[datetime] = None
 
 
 @dataclass
